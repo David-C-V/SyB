@@ -1,21 +1,22 @@
-.App {
-  text-align: center;
-  }
-
-
-
-
-
-.App {
-  background-color: #f295e2;
-  
-  color: white;
+*{
+  background-color: #f6d7f1;
 }
+
 .inicio{
-  width:10; 
-  height:10;
- 
-    
-
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  height: auto;
 }
-
+h1{
+  background-color: rgba(208, 0, 255, 0.682);
+  color: aqua;
+  text-align: center;
+  font-size: 800%;
+}
+h2 {
+  font-size: 700%;
+  text-align: justify;
+  margin-right: 10%;
+  margin-left: 10%;
+}
