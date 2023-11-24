@@ -1,28 +1,38 @@
 import logo from "./img/logo.png";
 import './App.css';
-
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import Productos from "./components/Productos";
+import Citas from "./components/Citas";
+import Paquetes from "./components/Paquetes";
 
 function App() {
     return (
       <div className="inicio">
+        <section class="menu">
+          <Router>
+            <header>
+              <nav id="menu">
+                <label for="" Clas="logo">
+                  <img src={logo} alr="LogoSyB"/>
+                </label>
+                <div className="link">
+                  <Link style={{ marginLeft: "20px"}}to="/productos">Productos</Link>
+                  <Link style={{ marginLeft: "20px"}}to="/servicios">Servicios</Link>
+                  <Link style={{ marginLeft: "20px"}}to="/citas">Citas</Link>
+                  
+                </div>
+              </nav>
+            </header>
+            <Routes>
+              <Route path="/productos"exact Component={Productos}></Route>
+              <Route path="/servicios"exact Component={Paquetes}></Route>
+              <Route path="/Citas"exact Component={Citas}></Route>
+            </Routes>
+          </Router>
+        </section>
         
-        <img src={logo} alt="logo" id="logo" />
-        <h1>Salud y Belleza</h1>
-        <h2>
-        Esta compañía está enfocada en apoyar a tu salud, 
-        ya que contamos con varios tratamientos como: planes 
-        de alimentación personalizados, mesoterapia, madero 
-        terapia, acupuntura, copas colombianas, masajes reductivos 
-        con aparatología, entre otros servicios los cuales los podrás 
-        ver en el menú de servicio.</h2>
-        <h2>
-        También contamos con una gran variedad de productos de 
-        belleza para tu cabello: como el óleo capilar, crema nutritiva, 
-        shampo…. para tu cara: cremas nutritivas, lápiz labial, sombra, 
-        rimen... para tu cuerpo: cremas hidratantes, cremas exfoliantes, 
-        desodorantes, perfumes, protector solar… todos esto productos y 
-        más los puedes ver en el menú de Productos. 
-        </h2>
+       
+       
         </div>
   );
 
